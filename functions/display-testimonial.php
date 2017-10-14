@@ -22,6 +22,7 @@ function va_testimonials_display_testimonial() {
     }
     $output .= '<small><a href="' . $company_url . '" target="_blank">' . $company . '</a></small></div>';
     $output .= '</div>';
+    $output .= '</div>';
     echo $output;
 
 }
