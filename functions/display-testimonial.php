@@ -9,20 +9,33 @@ function va_testimonials_display_testimonial() {
     $company_url = esc_url( get_post_meta( $post_id, 'company_url', true ) );
     $image = get_the_post_thumbnail_url( $post_id, 'thumbnail' );
 
-    $output = '<div class="col testimonial">';
-    $output .= '<div class="bubble">' . get_the_content() . '</div>';
-    $output .= '<div class="person">';
+    $output = '';
+    $output .= '<div class="col testimonial"><div class="bubble">' . get_the_content() . '</div><div class="person">';
     if ( $image ) {
         $output .= '<img class="small" src="' . $image . '" />';
     }
-    $output .= '<div>' . $client_name . '<br />';
-    $output .= '<small>' . $client_job . '</small>';
-    if ( $client_job && $company ) {
+    $output .= '<div>';
+    $output .= $client_name;
+    if ( $client_job || $company || $company_url ) {
+        $output .= '<br />';
+        $output .= '<small>';
+    }
+    $output .= $client_job;
+    if ( $client_job && ( $company || $company_url ) ) {
         $output .= ' - ';
     }
-    $output .= '<small><a href="' . $company_url . '" target="_blank">' . $company . '</a></small></div>';
+    if ( $company && $company_url ) {
+        $output .= '<a href="' . $company_url . '" target="_blank">' . $company . '</a>';
+    } else if ( $company_url ) {
+        $output .= '<a href="' . $company_url . '" target="_blank">' . $company_url . '</a>';
+    } else if ( $company ) {
+        $output .= $company;
+    }
     $output .= '</div>';
-    $output .= '</div>';
+    if ( $client_job || $company || $company_url ) {
+        $output .= '</small>';
+    }
+    $output .= '</div></div>';
     echo $output;
 
 }
