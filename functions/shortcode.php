@@ -1,14 +1,13 @@
 <?php
 
 // create shortcode with parameters so that the user can define what's queried - default is to list all blog posts
-// Example: [testimonials type='page, post' order='asc' category='ajankohtaista, blogi' orderby='date' posts='10' columns='3' ids='151, 153']
+// Example: [testimonials order='asc' orderby='date' posts='10' columns='3' ids='60, 64']
 function va_testimonials_shortcode( $atts ) {
 
     ob_start();
  
     // define attributes and their defaults
     extract( shortcode_atts( array (
-        'type' => '',
         'order' => 'desc',
         'orderby' => 'date',
         'posts' => -1,
