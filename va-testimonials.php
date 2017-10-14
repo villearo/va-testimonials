@@ -2,7 +2,7 @@
 /*
 Plugin Name:    VA Testimonials
 Plugin URI:     
-Description:    Custom post type for client testimonials. Examples: [testimonials] or more specific [testimonials order='asc' orderby='date' posts='10' columns='3' ids='60, 64']
+Description:    Custom post type for client testimonials. Shortcode usage: [testimonials] or more specific [testimonials order='asc' orderby='date' posts='10' columns='3' ids='60, 64']
 Version:        1.0.0
 Author:         Ville Aro
 Author URI:     https://villearo.fi/
