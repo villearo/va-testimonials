@@ -9,17 +9,19 @@ function va_testimonials_display_testimonial() {
     $company_url = esc_url( get_post_meta( $post_id, 'company_url', true ) );
     $image = get_the_post_thumbnail_url( $post_id, 'thumbnail' );
 
-    echo '<div class="col testimonial">';
-        echo '<div class="bubble">' . get_the_content() . '</div>';
-        echo '<div class="person">';
-            echo '<img class="small" src="' . $image . '" />';
-            echo '<div>' . $client_name . '<br />';
-            echo '<small>' . $client_job . '</small>';
-            if ( $client_job && $company ) {
-                echo ' - ';
-            }
-            echo '<small><a href="' . $company_url . '" target="_blank">' . $company . '</a></small></div>';
-        echo '</div>';
-    echo '</div>';
+    $output = '<div class="col testimonial">';
+    $output .= '<div class="bubble">' . get_the_content() . '</div>';
+    $output .= '<div class="person">';
+    if ( $image ) {
+        $output .= '<img class="small" src="' . $image . '" />';
+    }
+    $output .= '<div>' . $client_name . '<br />';
+    $output .= '<small>' . $client_job . '</small>';
+    if ( $client_job && $company ) {
+        $output .= ' - ';
+    }
+    $output .= '<small><a href="' . $company_url . '" target="_blank">' . $company . '</a></small></div>';
+    $output .= '</div>';
+    echo $output;
 
 }
