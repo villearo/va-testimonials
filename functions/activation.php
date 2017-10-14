@@ -11,8 +11,9 @@ function va_testimonials_setup_post_type() {
 		'edit_item' => __('Edit Testimonial'),
 		'view_item' => __('View Testimonial')
 	),
-	'public' => true,
-	'has_archive' => true,
+	'public' => false,
+	'publicly_queryable' => false,
+	'has_archive' => false,
 	'rewrite' => array('slug' => 'testimonials'),
 	'show_ui' => true,
 	'show_in_menu' => true,
