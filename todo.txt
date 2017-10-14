@@ -2,4 +2,5 @@
 - clean shortcode atts ?
 - footer backlink to villearo.fi
 - readme
-- company appears as url even without link
+- company appears as link even without url
+- if no image img tag still echoes
