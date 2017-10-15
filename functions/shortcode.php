@@ -13,8 +13,6 @@ function va_testimonials_shortcode( $atts ) {
         'ids' => array(),
     ), $atts ) );
 
-    $type_array = explode(',', $type);
-
     if ($ids) {
         $id_array = explode(',', $ids);
     } else {
