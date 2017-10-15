@@ -13,10 +13,16 @@ function va_testimonials_shortcode( $atts ) {
         'ids' => array(),
     ), $atts ) );
 
-    if ($ids) {
+    if ( $ids ) {
         $id_array = explode(',', $ids);
     } else {
         $id_array = '';
+    }
+
+    if ( $columns < 3 ) {
+        $columns_mobile = 1;
+    } else {
+        $columns_mobile = 2;
     }
 
     // define query parameters based on attributes
@@ -32,7 +38,7 @@ function va_testimonials_shortcode( $atts ) {
 
 
     if ( $query->have_posts() ) : ?>
-        <div class="nested grid-<?php echo $columns ?>_md-2_sm-1-equalHeight">
+        <div class="nested grid-<?php echo $columns ?>_md-<?php echo $columns_mobile ?>_sm-1-equalHeight">
 
             <?php while ( $query->have_posts() ) :
                 $query->the_post();
