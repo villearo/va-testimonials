@@ -1,7 +1,5 @@
 <?php
 
-// create shortcode with parameters so that the user can define what's queried - default is to list all blog posts
-// Example: [testimonials order='asc' orderby='date' posts='10' columns='3' ids='60, 64']
 function va_testimonials_shortcode( $atts ) {
 
     ob_start();
@@ -55,7 +53,3 @@ function va_testimonials_shortcode( $atts ) {
 
 }
 add_shortcode( 'testimonials', 'va_testimonials_shortcode' );
-
-
-
-

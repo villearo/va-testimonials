@@ -26,6 +26,8 @@ function va_testimonials_setup_post_type() {
 	'has_archive' => false,
 	'menu_icon' => 'dashicons-format-quote'
 	);
+	
+	// https://codex.wordpress.org/Function_Reference/register_post_type
 	register_post_type('va-testimonials', $args);
 
 }
