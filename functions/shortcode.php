@@ -38,7 +38,7 @@ function va_testimonials_shortcode( $atts ) {
 
 
     if ( $query->have_posts() ) : ?>
-        <div class="nested grid-<?php echo $columns ?>_md-<?php echo $columns_mobile ?>_sm-1-equalHeight">
+        <div class="nested grid-<?php echo $columns ?>_md-<?php echo $columns_mobile ?>_sm-1">
 
             <?php while ( $query->have_posts() ) :
                 $query->the_post();
