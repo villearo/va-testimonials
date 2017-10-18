@@ -1,4 +1,5 @@
 - translations
+- register pll string for polulang
 - clean shortcode atts ?
 - footer backlink to villearo.fi
 - readme
