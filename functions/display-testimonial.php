@@ -12,7 +12,7 @@ function va_testimonials_display_testimonial() {
     $output = '';
     $output .= '<div class="col testimonial"><div class="bubble">' . get_the_content() . '</div><div class="person">';
     if ( $image ) {
-        $output .= '<img class="small" src="' . $image . '" />';
+        $output .= '<img class="small" src="' . $image . '" alt="' . $client_name . '" />';
     }
     $output .= '<div>';
     $output .= $client_name;
