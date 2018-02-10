@@ -31,10 +31,10 @@ function va_testimonials_display_testimonial() {
     } else if ( $company ) {
         $output .= $company;
     }
-    $output .= '</div>';
     if ( $client_job || $company || $company_url ) {
         $output .= '</small>';
     }
+    $output .= '</div>';
     $output .= '</div></div>';
     echo $output;
 
