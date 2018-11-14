@@ -25,9 +25,9 @@ function va_testimonials_display_testimonial() {
         $output .= ' - ';
     }
     if ( $company && $company_url ) {
-        $output .= '<a href="' . $company_url . '" target="_blank">' . $company . '</a>';
+        $output .= '<a href="' . $company_url . '" target="_blank" rel="noopener">' . $company . '</a>';
     } else if ( $company_url ) {
-        $output .= '<a href="' . $company_url . '" target="_blank">' . $company_url . '</a>';
+        $output .= '<a href="' . $company_url . '" target="_blank" rel="noopener">' . $company_url . '</a>';
     } else if ( $company ) {
         $output .= $company;
     }
